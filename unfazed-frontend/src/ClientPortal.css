@@ -1,0 +1,499 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.client-portal {
+  min-height: 100vh;
+  padding: 32px 22px;
+  box-sizing: border-box;
+  background: #f8f7fc;
+  color: #302d46;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.client-portal *,
+.client-portal *::before,
+.client-portal *::after {
+  box-sizing: border-box;
+}
+
+.client-portal button,
+.client-portal input,
+.client-portal textarea {
+  font: inherit;
+}
+
+.client-portal button {
+  cursor: pointer;
+}
+
+.client-portal button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.cp-header {
+  max-width: 1050px;
+  margin: 0 auto 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cp-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #302d46;
+  text-align: left;
+}
+
+.cp-brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #eee9ff;
+  color: #7967c7;
+  font-size: 31px;
+}
+
+.cp-brand strong {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.cp-brand-dot {
+  color: #917cdd;
+}
+
+.cp-brand small {
+  display: block;
+  margin-top: 3px;
+  color: #9691aa;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cp-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 11px 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cp-button-outline {
+  border: 1px solid #e4e0ef;
+  background: white;
+  color: #6e6687;
+}
+
+.cp-button-outline:hover {
+  background: #f7f4ff;
+  border-color: #cfc5f1;
+}
+
+.cp-button-primary {
+  border: 1px solid #8170cf;
+  background: #8170cf;
+  color: white;
+}
+
+.cp-button-primary:hover {
+  background: #6d5bbd;
+}
+
+.cp-auth-card {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 36px;
+  border: 1px solid #efedf5;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 12px 40px rgba(40, 20, 70, 0.07);
+}
+
+.cp-heading-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 17px;
+  background: #eee9ff;
+  color: #7967c7;
+  font-size: 34px;
+}
+
+.cp-eyebrow {
+  margin: 0 0 10px;
+  color: #9690ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cp-auth-card h1,
+.cp-welcome-card h1 {
+  margin: 0 0 12px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(25px, 4vw, 32px);
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.cp-description {
+  margin: 0 0 26px;
+  color: #89859c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  width: 100%;
+}
+
+.cp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  color: #454057;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cp-field input,
+.cp-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 13px 14px;
+  border: 1px solid #e4e1ed;
+  border-radius: 9px;
+  background: #fff;
+  color: #302d46;
+  font-size: 13px;
+  font-weight: 400;
+  outline: none;
+}
+
+.cp-field input {
+  height: 46px;
+}
+
+.cp-field textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.cp-field input::placeholder,
+.cp-field textarea::placeholder {
+  color: #aaa5b9;
+}
+
+.cp-field input:focus,
+.cp-field textarea:focus {
+  border-color: #8b79d2;
+  box-shadow: 0 0 0 3px rgba(129, 112, 207, 0.12);
+}
+
+.cp-field > small {
+  color: #9691a8;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.cp-submit {
+  width: 100%;
+  min-height: 47px;
+  margin-top: 4px;
+}
+
+.cp-switch {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 24px;
+  color: #89859c;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cp-switch button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #7865c6;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cp-switch button:hover {
+  text-decoration: underline;
+}
+
+.cp-info {
+  margin-top: 24px;
+  padding: 15px;
+  border: 1px solid #eee8ff;
+  border-radius: 11px;
+  background: #faf8ff;
+}
+
+.cp-info strong {
+  font-size: 12px;
+}
+
+.cp-info p {
+  margin: 7px 0 0;
+  color: #89849d;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.cp-alert {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 18px;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.cp-alert-error {
+  border: 1px solid #f4d2d2;
+  background: #fff1f1;
+  color: #a32121;
+}
+
+.cp-alert-success {
+  border: 1px solid #ccebd7;
+  background: #effaf2;
+  color: #176b3a;
+}
+
+.cp-dashboard {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.cp-welcome-card,
+.cp-messages-card {
+  padding: 28px;
+  border: 1px solid #efedf5;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(40, 20, 70, 0.035);
+}
+
+.cp-welcome-card {
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #fff 65%, #f5f0ff);
+}
+
+.cp-welcome-card h1 {
+  overflow-wrap: anywhere;
+}
+
+.cp-welcome-card > p:last-child,
+.cp-welcome-card > p:nth-last-child(2) {
+  color: #89859c;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cp-messages-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.cp-messages-heading h2 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.cp-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 150px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 16px 4px;
+  border-top: 1px solid #f0eef6;
+  border-bottom: 1px solid #f0eef6;
+}
+
+.cp-message {
+  width: fit-content;
+  max-width: 82%;
+  padding: 14px 16px;
+  border-radius: 13px;
+  overflow-wrap: anywhere;
+}
+
+.cp-message-sent {
+  align-self: flex-end;
+  border: 1px solid #e8e0ff;
+  background: #f0ebff;
+}
+
+.cp-message-received {
+  align-self: flex-start;
+  border: 1px solid #eeeef3;
+  background: #f7f7fa;
+}
+
+.cp-message strong {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+}
+
+.cp-message p {
+  margin: 0 0 9px;
+  color: #454057;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.cp-message small {
+  display: block;
+  color: #9691a8;
+  font-size: 10px;
+}
+
+.cp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  margin: 0;
+  color: #9691a8;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cp-empty h3 {
+  margin: 10px 0 7px;
+  color: #454057;
+  font-size: 14px;
+}
+
+.cp-empty p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cp-empty-icon {
+  color: #8b79d2;
+  font-size: 34px;
+}
+
+.cp-send-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.cp-send-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cp-send-footer > small {
+  color: #9691a8;
+  font-size: 11px;
+}
+
+.cp-footer {
+  max-width: 1050px;
+  margin: 32px auto 0;
+  color: #a19cb2;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .client-portal {
+    padding: 22px 14px;
+  }
+
+  .cp-header {
+    margin-bottom: 28px;
+  }
+
+  .cp-brand-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cp-brand strong {
+    font-size: 20px;
+  }
+
+  .cp-auth-card {
+    padding: 24px 20px;
+    border-radius: 15px;
+  }
+
+  .cp-welcome-card,
+  .cp-messages-card {
+    padding: 20px 16px;
+  }
+
+  .cp-messages-heading {
+    align-items: flex-start;
+  }
+
+  .cp-message {
+    max-width: 94%;
+  }
+
+  .cp-send-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cp-send-footer .cp-button {
+    width: 100%;
+  }
+}
